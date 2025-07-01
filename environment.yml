@@ -1,0 +1,12 @@
+name: moo25
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - numpy
+  - matplotlib
+  - seaborn
+  - pandas
+  - scipy
+  - pymoo=0.6.1
+  - jupyterlab
+  - tqdm

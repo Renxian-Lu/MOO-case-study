@@ -1,0 +1,28 @@
+# Python basics
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+
+# Project-specific results (large files)
+results/raw/*.npz
+results/raw/*.pkl
+results/plots/*.png
+results/plots/*.pdf
+
+# Temporary test files
+test_*.py
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large data files
+*.npy
+*.npz
