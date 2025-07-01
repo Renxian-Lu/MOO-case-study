@@ -31,13 +31,6 @@ The algorithms are evaluated on three continuous DTLZ test functions (DTLZ1, DTL
 └── README.md
 ```
 
-## Requirements
-
-- Python 3.11
-- PyMOO 0.6.1
-- NumPy, Pandas, Matplotlib, Seaborn
-- Jupyter Lab
-
 ## Quick Start
 
 ### 1. Environment Setup
@@ -77,37 +70,6 @@ Open and run the Jupyter notebook for analysis:
 
 ```bash
 jupyter lab notebooks/analysis.ipynb
-```
-
-Or run analysis directly:
-
-```bash
-python -c "
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# Load results
-df = pd.read_csv('results/indicators/summary.csv')
-
-# Create visualizations
-plt.figure(figsize=(12, 5))
-
-plt.subplot(1, 2, 1)
-sns.boxplot(data=df, x='problem', y='HV', hue='algo')
-plt.title('Hypervolume Comparison')
-
-plt.subplot(1, 2, 2)
-sns.boxplot(data=df, x='problem', y='IGD', hue='algo')
-plt.title('IGD Comparison')
-
-plt.tight_layout()
-plt.savefig('results/plots/comparison.png', dpi=300)
-plt.show()
-
-# Summary statistics
-print(df.groupby(['problem', 'algo'])[['HV', 'IGD']].agg(['mean', 'std']))
-"
 ```
 
 ## Performance Indicators
@@ -169,13 +131,10 @@ Results are automatically saved to:
 ## Dependencies
 
 Core packages:
-- `pymoo==0.6.1` - Multi-objective optimization library
-- `numpy` - Numerical computing
-- `pandas` - Data manipulation
-- `matplotlib` - Plotting
-- `seaborn` - Statistical visualization
-- `scipy` - Scientific computing
-- `tqdm` - Progress bars
+- Python 3.11
+- PyMOO 0.6.1
+- NumPy, Pandas, Matplotlib, Seaborn
+- Jupyter Lab
 
 ## License
 
